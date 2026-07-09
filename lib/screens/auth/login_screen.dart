@@ -32,7 +32,6 @@ class LoginScreen extends StatelessWidget {
             SizedBox(height: 5),
             TextField(
               decoration: InputDecoration(
-                hintText: "Enter user name",
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(12),
                 ),
@@ -49,9 +48,7 @@ class LoginScreen extends StatelessWidget {
             SizedBox(height: 5),
 
             TextField(
-              obscureText: true,
               decoration: InputDecoration(
-                hintText: "Enter password",
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(12),
                 ),
