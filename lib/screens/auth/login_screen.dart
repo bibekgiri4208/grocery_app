@@ -1,26 +1,122 @@
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatelessWidget {
-  const LoginScreen({super.key});
+  LoginScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(toolbarHeight: 1),
-      body: Center(
+      body: Padding(
+        padding: EdgeInsets.all(20.0),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Icon(Icons.arrow_back, size: 30, color: Colors.green),
-            Image.asset("assets/logo.png"),
+            SizedBox(height: 40),
+            Icon(Icons.arrow_back, size: 30, color: Color(0xff82CD47)),
+            Center(child: Image.asset("assets/logo.png", height: 230)),
+
+            Center(
+              child: Text(
+                "Sign In",
+                style: TextStyle(
+                  fontSize: 28,
+                  fontWeight: FontWeight.bold,
+                  color: Color(0xff82CD47),
+                ),
+              ),
+            ),
+
+            SizedBox(height: 20),
+
+            Text("Name", style: TextStyle(fontSize: 20, color: Colors.grey)),
+            SizedBox(height: 5),
+            TextField(
+              decoration: InputDecoration(
+                hintText: "Enter user name",
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(12),
+                ),
+              ),
+            ),
+
+            SizedBox(height: 15),
 
             Text(
-              "Sign In",
-              style: TextStyle(
-                fontSize: 30,
-                fontWeight: FontWeight.bold,
-                color: Color(0xff82CD47),
+              "Password",
+              style: TextStyle(fontSize: 20, color: Colors.grey),
+            ),
+
+            SizedBox(height: 5),
+
+            TextField(
+              obscureText: true,
+              decoration: InputDecoration(
+                hintText: "Enter password",
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(12),
+                ),
               ),
-              textAlign: TextAlign.center,
+            ),
+
+            SizedBox(height: 10),
+
+            Align(
+              alignment: Alignment.centerRight,
+              child: Text(
+                "Forget password?",
+                style: TextStyle(color: Color(0xff82CD47), fontSize: 14),
+              ),
+            ),
+
+            SizedBox(height: 20),
+
+            Container(
+              width: double.infinity,
+              padding: EdgeInsets.symmetric(vertical: 15),
+              decoration: BoxDecoration(
+                color: Color(0xff82CD47),
+                borderRadius: BorderRadius.circular(30),
+              ),
+              child: Center(
+                child: Text(
+                  "Sign in",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+            ),
+
+            SizedBox(height: 20),
+
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(Icons.mail, size: 25, color: Colors.red),
+                SizedBox(width: 5),
+                Text("Login with google", style: TextStyle(fontSize: 14)),
+              ],
+            ),
+
+            SizedBox(height: 40),
+
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  "Don't have an account? ",
+                  style: TextStyle(color: Colors.grey),
+                ),
+                Text(
+                  "Sign up",
+                  style: TextStyle(
+                    color: Color(0xff82CD47),
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ],
             ),
           ],
         ),

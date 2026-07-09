@@ -47,7 +47,7 @@ class OnboardingScreen extends StatelessWidget {
                 );
               },
               child: Container(
-                width: 250,
+                width: 280,
                 height: 50,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(30),
@@ -56,7 +56,11 @@ class OnboardingScreen extends StatelessWidget {
                 child: Center(
                   child: Text(
                     "Get Started",
-                    style: TextStyle(fontSize: 18, color: Colors.white),
+                    style: TextStyle(
+                      fontSize: 18,
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                 ),
               ),
