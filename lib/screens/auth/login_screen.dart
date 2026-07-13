@@ -17,10 +17,7 @@ class LoginScreen extends StatelessWidget {
               SizedBox(height: 40),
               InkWell(
                 onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (_) => OnboardingScreen()),
-                  );
+                  Navigator.pop(context);
                 },
                 child: Icon(
                   Icons.arrow_back,

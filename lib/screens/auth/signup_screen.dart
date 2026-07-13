@@ -16,10 +16,7 @@ class SignupScreen extends StatelessWidget {
               SizedBox(height: 40),
               InkWell(
                 onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (_) => LoginScreen()),
-                  );
+                  Navigator.pop(context);
                 },
                 child: Icon(
                   Icons.arrow_back,
@@ -89,7 +86,7 @@ class SignupScreen extends StatelessWidget {
               SizedBox(height: 10),
 
               Text(
-                "Password",
+                " Confirm Password",
                 style: TextStyle(fontSize: 20, color: Colors.grey),
               ),
 
