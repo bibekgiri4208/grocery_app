@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:grocery_app/screens/auth/signup_screen.dart';
-import 'package:grocery_app/screens/onboarding/onboarding_screen.dart';
+import 'package:grocery_app/screens/auth/login_screen.dart';
 
-class LoginScreen extends StatelessWidget {
-  LoginScreen({super.key});
+class SignupScreen extends StatelessWidget {
+  const SignupScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +18,7 @@ class LoginScreen extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (_) => OnboardingScreen()),
+                    MaterialPageRoute(builder: (_) => LoginScreen()),
                   );
                 },
                 child: Icon(
@@ -32,7 +31,7 @@ class LoginScreen extends StatelessWidget {
 
               Center(
                 child: Text(
-                  "Sign In",
+                  "Sign Up",
                   style: TextStyle(
                     fontSize: 28,
                     fontWeight: FontWeight.bold,
@@ -41,21 +40,34 @@ class LoginScreen extends StatelessWidget {
                 ),
               ),
 
-              SizedBox(height: 20),
+              SizedBox(height: 10),
 
               Text("Name", style: TextStyle(fontSize: 20, color: Colors.grey)),
               SizedBox(height: 5),
               TextField(
                 decoration: InputDecoration(
                   prefixIcon: Icon(Icons.search),
-                  hintText: "Enter user name",
+                  hintText: "Bibek",
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(12),
                   ),
                 ),
               ),
 
-              SizedBox(height: 15),
+              SizedBox(height: 10),
+
+              Text("Email", style: TextStyle(fontSize: 20, color: Colors.grey)),
+              SizedBox(height: 5),
+              TextField(
+                decoration: InputDecoration(
+                  hintText: "bibekgiri@gmail.com",
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                ),
+              ),
+
+              SizedBox(height: 10),
 
               Text(
                 "Password",
@@ -76,15 +88,24 @@ class LoginScreen extends StatelessWidget {
 
               SizedBox(height: 10),
 
-              Align(
-                alignment: Alignment.centerRight,
-                child: Text(
-                  "Forget password?",
-                  style: TextStyle(color: Color(0xff82CD47), fontSize: 14),
+              Text(
+                "Password",
+                style: TextStyle(fontSize: 20, color: Colors.grey),
+              ),
+
+              SizedBox(height: 5),
+
+              TextField(
+                decoration: InputDecoration(
+                  suffixIcon: Icon(Icons.visibility),
+                  hintText: "Enter password",
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(12),
+                  ),
                 ),
               ),
 
-              SizedBox(height: 20),
+              SizedBox(height: 40),
 
               InkWell(
                 onTap: () {
@@ -102,7 +123,7 @@ class LoginScreen extends StatelessWidget {
                   ),
                   child: Center(
                     child: Text(
-                      "Sign in",
+                      "Sign Up",
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 18,
@@ -112,29 +133,17 @@ class LoginScreen extends StatelessWidget {
                   ),
                 ),
               ),
-
-              SizedBox(height: 20),
-
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Icon(Icons.mail, size: 25, color: Colors.red),
-                  SizedBox(width: 5),
-                  Text("Login with google", style: TextStyle(fontSize: 14)),
-                ],
-              ),
-
               SizedBox(height: 40),
 
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    "Don't have an account? ",
+                    "Already have a account? ",
                     style: TextStyle(color: Colors.grey),
                   ),
                   Text(
-                    "Sign up",
+                    "Sign in",
                     style: TextStyle(
                       color: Color(0xff82CD47),
                       fontWeight: FontWeight.bold,
