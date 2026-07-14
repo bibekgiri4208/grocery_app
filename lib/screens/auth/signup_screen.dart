@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:grocery_app/screens/auth/login_screen.dart';
+import 'package:grocery_app/screens/home/home_screen.dart';
 
 class SignupScreen extends StatelessWidget {
   const SignupScreen({super.key});
@@ -108,7 +109,7 @@ class SignupScreen extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (_) => SignupScreen()),
+                    MaterialPageRoute(builder: (_) => HomeScreen()),
                   );
                 },
                 child: Container(
