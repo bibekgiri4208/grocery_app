@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:grocery_app/screens/home/fruits_list.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -69,6 +70,39 @@ class HomeScreen extends StatelessWidget {
             Text(
               "Catagories",
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            ),
+
+            SizedBox(height: 10),
+
+            SizedBox(
+              height: 95,
+              child: ListView.builder(
+                scrollDirection: Axis.horizontal,
+                itemCount: fruitsData.length,
+
+                itemBuilder: (context, index) {
+                  return Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 5),
+                    child: Column(
+                      children: [
+                        Container(
+                          height: 75,
+                          width: 75,
+                          decoration: BoxDecoration(
+                            color: Colors.red,
+                            borderRadius: BorderRadius.circular(5),
+                            image: DecorationImage(
+                              fit: BoxFit.cover,
+                              image: AssetImage(fruitsData[index]['image']),
+                            ),
+                          ),
+                        ),
+                        Text(fruitsData[index]['name']),
+                      ],
+                    ),
+                  );
+                },
+              ),
             ),
           ],
         ),
