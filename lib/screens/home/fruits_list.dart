@@ -5,3 +5,33 @@ List fruitsData = [
   {'name': "Thali", 'image': "assets/thali.jpg"},
   {'name': "Bakery", 'image': "assets/bakery.jpg"},
 ];
+List productData = [
+  {
+    'name': "Apple",
+    'image': "assets/apple.png",
+    'price': "₹180.00",
+    'weight': "1kg",
+    'discount': "-16%",
+  },
+  {
+    'name': "Pineapple",
+    'image': "assets/pineapple.png",
+    'price': "₹170.00",
+    'weight': "1.2kg",
+    'discount': "-16%",
+  },
+  {
+    'name': "Pomegranate",
+    'image': "assets/pomegranate.png",
+    'price': "₹150.00",
+    'weight': "1.5kg",
+    'discount': "New",
+  },
+  {
+    'name': "Orange",
+    'image': "assets/orange.png",
+    'price': "₹160.00",
+    'weight': "2kg",
+    'discount': "New",
+  },
+];
