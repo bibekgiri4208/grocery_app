@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:grocery_app/screens/home/dash_board_screen.dart';
 import 'package:grocery_app/screens/onboarding/onboarding_screen.dart';
 
 void main() {
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const OnboardingScreen(),
+      home: const DashBoardScreen(),
       debugShowCheckedModeBanner: false,
     );
   }
