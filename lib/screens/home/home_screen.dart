@@ -1,3 +1,4 @@
+import 'package:dotted_line/dotted_line.dart';
 import 'package:flutter/material.dart';
 import 'package:grocery_app/screens/home/fruits_list.dart';
 
@@ -120,7 +121,7 @@ class HomeScreen extends StatelessWidget {
                 shrinkWrap: true,
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
-                  childAspectRatio: 0.6,
+                  childAspectRatio: 0.65,
                   crossAxisSpacing: 10,
                   mainAxisSpacing: 10,
                 ),
@@ -128,52 +129,85 @@ class HomeScreen extends StatelessWidget {
                 itemBuilder: (context, index) {
                   return Card(
                     color: Colors.white,
-                    child: Column(
+                    child: Stack(
                       children: [
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Container(
-                                height: 30,
-                                width: 50,
-                                color: Colors.green,
-                                child: Center(
-                                  child: Text(
-                                    productData[index]['discount'],
-                                    style: TextStyle(color: Colors.white),
+                        Column(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Container(
+                                    height: 30,
+                                    width: 50,
+                                    color: Colors.green,
+                                    child: Center(
+                                      child: Text(
+                                        productData[index]['discount'],
+                                        style: TextStyle(color: Colors.white),
+                                      ),
+                                    ),
                                   ),
-                                ),
-                              ),
 
-                              Icon(Icons.favorite_outline),
-                            ],
+                                  Icon(Icons.favorite_outline),
+                                ],
+                              ),
+                            ),
+                            Image.asset(
+                              productData[index]['image'],
+                              height: 100,
+                            ),
+                            Text(
+                              productData[index]['price'],
+                              style: TextStyle(
+                                color: Colors.green,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            Text(
+                              productData[index]['name'],
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 25,
+                              ),
+                            ),
+                            Text(
+                              productData[index]['weight'],
+                              style: TextStyle(color: Colors.grey),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: DottedLine(
+                                dashColor: Colors.green,
+                                lineThickness: 1,
+                              ),
+                            ),
+                            SizedBox(height: 9),
+                            Text(
+                              "Add to Cart",
+                              style: TextStyle(
+                                color: Colors.green,
+                                fontSize: 14,
+                              ),
+                            ),
+                          ],
+                        ),
+
+                        Positioned(
+                          bottom: 15,
+                          right: 5,
+
+                          child: CircleAvatar(
+                            radius: 22,
+                            backgroundColor: Colors.green,
+                            child: Icon(
+                              Icons.shopping_bag_outlined,
+                              size: 25,
+                              color: Colors.white,
+                            ),
                           ),
-                        ),
-                        Image.asset(productData[index]['image'], height: 100),
-                        Text(
-                          productData[index]['price'],
-                          style: TextStyle(
-                            color: Colors.green,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                        Text(
-                          productData[index]['name'],
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 25,
-                          ),
-                        ),
-                        Text(
-                          productData[index]['weight'],
-                          style: TextStyle(color: Colors.grey),
-                        ),
-                        SizedBox(height: 20),
-                        Text(
-                          "Add to Cart",
-                          style: TextStyle(color: Colors.green),
                         ),
                       ],
                     ),

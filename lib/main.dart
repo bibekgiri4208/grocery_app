@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:grocery_app/screens/home/dash_board_screen.dart';
 import 'package:grocery_app/screens/home/fruits_screen.dart';
+import 'package:grocery_app/screens/home/home_screen.dart';
 import 'package:grocery_app/screens/home/stack_screen.dart';
 import 'package:grocery_app/screens/onboarding/onboarding_screen.dart';
 
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const StackScreen(),
+      home: const HomeScreen(),
       debugShowCheckedModeBanner: false,
     );
   }
