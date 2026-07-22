@@ -12,6 +12,8 @@ List productData = [
     'price': "₹180.00",
     'weight': "1kg",
     'discount': "-16%",
+    'description':
+        "Apple Mountain works as a seller for many apple growers of apple. apple are easy to spot in your produce aisle. They are just like regular apple, but they will usually have a few more scars on  ReadMore",
   },
   {
     'name': "Pineapple",
@@ -19,6 +21,7 @@ List productData = [
     'price': "₹170.00",
     'weight': "1.2kg",
     'discount': "-16%",
+    'decription': "",
   },
   {
     'name': "Pomegranate",
