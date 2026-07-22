@@ -1,5 +1,6 @@
 import 'package:dotted_line/dotted_line.dart';
 import 'package:flutter/material.dart';
+import 'package:grocery_app/screens/home/fruit_details_screen.dart';
 import 'package:grocery_app/screens/home/fruits_list.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -155,9 +156,19 @@ class HomeScreen extends StatelessWidget {
                                 ],
                               ),
                             ),
-                            Image.asset(
-                              productData[index]['image'],
-                              height: 100,
+                            InkWell(
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (_) => FruitDetailsScreen(),
+                                  ),
+                                );
+                              },
+                              child: Image.asset(
+                                productData[index]['image'],
+                                height: 100,
+                              ),
                             ),
                             Text(
                               productData[index]['price'],
