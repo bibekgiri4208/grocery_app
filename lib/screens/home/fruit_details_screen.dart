@@ -1,7 +1,20 @@
 import 'package:flutter/material.dart';
 
 class FruitDetailsScreen extends StatelessWidget {
-  const FruitDetailsScreen({super.key});
+  final String name;
+  final String image;
+  final String price;
+  final String weight;
+  final String description;
+
+  const FruitDetailsScreen({
+    super.key,
+    required this.name,
+    required this.image,
+    required this.price,
+    required this.weight,
+    required this.description,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -31,16 +44,17 @@ class FruitDetailsScreen extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Icon(Icons.arrow_back, size: 30),
+                    InkWell(
+                      onTap: () {
+                        Navigator.pop(context);
+                      },
+                      child: Icon(Icons.arrow_back, size: 30),
+                    ),
                     Icon(Icons.favorite_outline, size: 30),
                   ],
                 ),
 
-                Image.asset(
-                  "assets/apples_info.png",
-                  fit: BoxFit.cover,
-                  height: 300,
-                ),
+                Image.asset(image, fit: BoxFit.cover, height: 300),
 
                 SizedBox(height: 10),
 
@@ -48,7 +62,7 @@ class FruitDetailsScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      "Apple",
+                      name,
                       style: TextStyle(
                         fontSize: 35,
                         fontWeight: FontWeight.bold,
@@ -57,7 +71,7 @@ class FruitDetailsScreen extends StatelessWidget {
                     Row(
                       children: [
                         Icon(Icons.remove_circle, color: Colors.green),
-                        Text("1kg"),
+                        Text(weight),
                         Icon(Icons.add_circle, color: Colors.green),
                       ],
                     ),
@@ -78,7 +92,7 @@ class FruitDetailsScreen extends StatelessWidget {
                   ],
                 ),
                 Text(
-                  "₹180.00",
+                  price,
                   style: TextStyle(
                     color: Colors.green,
                     fontWeight: FontWeight.bold,
@@ -95,7 +109,7 @@ class FruitDetailsScreen extends StatelessWidget {
                 SizedBox(height: 10),
 
                 Text(
-                  "Apple Mountain works as a seller for many apple growers of apple. apple are easy to spot in your produce aisle. They are just like regular apple, but they will usually have a few more scars on...",
+                  description,
                   style: TextStyle(fontSize: 16, color: Colors.blueGrey),
                 ),
                 Text("ReadMore", style: TextStyle(color: Colors.green)),
@@ -109,20 +123,28 @@ class FruitDetailsScreen extends StatelessWidget {
                       height: 50,
                       width: 150,
                       decoration: BoxDecoration(
-                        color: Colors.grey,
+                        color: Colors.white,
                         borderRadius: BorderRadius.circular(10),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.black.withValues(alpha: 0.2),
+                            blurRadius: 2,
+                            spreadRadius: 1,
+                            offset: Offset(0, 2),
+                          ),
+                        ],
                       ),
                       child: Row(
                         children: [
                           SizedBox(width: 10),
                           Icon(
                             Icons.shopping_cart_outlined,
-                            color: Colors.white,
+                            color: Colors.green,
                           ),
                           Text(
                             "Add to Cart",
                             style: TextStyle(
-                              color: Colors.white,
+                              color: Colors.green,
                               fontSize: 20,
                               fontWeight: FontWeight.bold,
                             ),

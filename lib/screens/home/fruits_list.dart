@@ -21,7 +21,8 @@ List productData = [
     'price': "₹170.00",
     'weight': "1.2kg",
     'discount': "-16%",
-    'decription': "",
+    'description':
+        "A tropical favorite with vibrant golden flesh and a refreshing sweet-tart taste. Rich in vitamin C and naturally fat-free. Enjoy fresh, juiced, or caramelized.",
   },
   {
     'name': "Pomegranate",
@@ -29,6 +30,8 @@ List productData = [
     'price': "₹150.00",
     'weight': "1.5kg",
     'discount': "New",
+    'description':
+        "A vibrant ruby-red fruit packed with crisp, juicy seeds (arils). Rich in antioxidants and vitamin C. Enjoy fresh, sprinkled over dishes, or juiced.",
   },
   {
     'name': "Orange",
@@ -36,5 +39,7 @@ List productData = [
     'price': "₹160.00",
     'weight': "2kg",
     'discount': "New",
+    'description':
+        "Sunshine in every bite. Sweet, tangy, and incredibly refreshing—ideal for fruit bowls, salads, or homemade lemonade.",
   },
 ];
