@@ -7,6 +7,7 @@ class CartScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
         centerTitle: true,
         backgroundColor: Colors.white,
@@ -19,17 +20,18 @@ class CartScreen extends StatelessWidget {
 
         itemBuilder: (context, index) {
           return Container(
+            margin: EdgeInsets.symmetric(vertical: 5, horizontal: 15),
             height: 150,
             width: double.maxFinite,
             decoration: BoxDecoration(
-              color: Color(0xffFFFFFF),
+              color: Colors.white,
               borderRadius: BorderRadiusGeometry.circular(10),
               boxShadow: [
                 BoxShadow(
-                  color: Colors.black.withValues(alpha: 0.1),
-                  blurRadius: 2,
-                  spreadRadius: 4,
-                  offset: Offset(0, 1),
+                  color: Colors.black.withValues(alpha: 0.3),
+                  blurRadius: 4,
+                  spreadRadius: 0.5,
+                  offset: Offset(0, 4),
                 ),
               ],
             ),
@@ -47,12 +49,19 @@ class CartScreen extends StatelessWidget {
                         Text(
                           "Apple",
                           style: TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.w600,
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
                           ),
                         ),
-                        Text("1kg"),
-                        Text("₹150.00", style: TextStyle(color: Colors.green)),
+                        Text("1kg", style: TextStyle(color: Colors.blueGrey)),
+                        Text(
+                          "₹150.00",
+                          style: TextStyle(
+                            color: Colors.green,
+                            fontSize: 15,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
                       ],
                     ),
                   ],
