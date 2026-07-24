@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class OrderConformationScreen extends StatelessWidget {
-  const OrderConformationScreen({super.key});
+class OrderConfirmationScreen extends StatelessWidget {
+  const OrderConfirmationScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +12,7 @@ class OrderConformationScreen extends StatelessWidget {
         backgroundColor: Colors.white,
 
         title: Text(
-          "Order Conformation",
+          "Order Confirmation",
           style: TextStyle(fontWeight: FontWeight.bold),
         ),
       ),
@@ -32,7 +32,7 @@ class OrderConformationScreen extends StatelessWidget {
               children: [
                 Row(
                   children: [
-                    Icon(Icons.pin_drop, size: 32),
+                    Icon(Icons.location_on, size: 32),
                     SizedBox(width: 20),
                     Row(
                       children: [
@@ -158,7 +158,7 @@ class OrderConformationScreen extends StatelessWidget {
               children: [
                 Row(
                   children: [
-                    Icon(Icons.local_offer, size: 32),
+                    Icon(Icons.money, size: 32),
                     SizedBox(width: 20),
                     Row(
                       children: [

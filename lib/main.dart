@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:grocery_app/screens/cart/cart_screen.dart';
-import 'package:grocery_app/screens/cart/order_conformation_screen.dart';
+import 'package:grocery_app/screens/cart/order_confirmation_screen.dart';
 import 'package:grocery_app/screens/home/dash_board_screen.dart';
 import 'package:grocery_app/screens/home/fruit_details_screen.dart';
 import 'package:grocery_app/screens/home/fruits_screen.dart';
@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const OrderConformationScreen(),
+      home: const OrderConfirmationScreen(),
       debugShowCheckedModeBanner: false,
     );
   }
