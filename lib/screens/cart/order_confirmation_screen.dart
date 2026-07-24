@@ -183,8 +183,8 @@ class OrderConfirmationScreen extends StatelessWidget {
 
             Center(
               child: Container(
-                height: 70,
-                width: 300,
+                height: 50,
+                width: 250,
                 decoration: BoxDecoration(
                   color: Colors.green,
                   borderRadius: BorderRadius.circular(30),
@@ -202,7 +202,7 @@ class OrderConfirmationScreen extends StatelessWidget {
                     "Confirm Order",
                     style: TextStyle(
                       color: Colors.white,
-                      fontSize: 26,
+                      fontSize: 22,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
