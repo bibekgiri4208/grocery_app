@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:grocery_app/screens/cart/cart_screen.dart';
 import 'package:grocery_app/screens/home/home_screen.dart';
 
 class DashBoardScreen extends StatefulWidget {
@@ -13,7 +14,7 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
   final List<Widget> _pages = [
     HomeScreen(),
     Center(child: Text("Two")),
-    Center(child: Text("Three")),
+    CartScreen(),
     Center(child: Text("Four")),
   ];
 
