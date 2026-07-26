@@ -176,7 +176,7 @@ class PayementScreen extends StatelessWidget {
               ),
             ),
 
-            SizedBox(height: 100),
+            SizedBox(height: 150),
 
             Center(
               child: Container(
